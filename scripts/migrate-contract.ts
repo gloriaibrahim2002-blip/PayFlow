@@ -4,6 +4,7 @@
  */
 
 import { Contract, Networks, TransactionBuilder, BASE_FEE, nativeToScVal, Address, xdr } from "@stellar/stellar-sdk";
+import { MultiEndpointServer as Server } from "./rpc-client";
 
 const RPC_URL = process.env.VITE_RPC_URL ?? "https://soroban-testnet.stellar.org";
 const NETWORK_PASSPHRASE = process.env.VITE_NETWORK_PASSPHRASE ?? Networks.TESTNET;
@@ -14,7 +15,6 @@ function addressVal(addr: string): xdr.ScVal {
 }
 
 async function getSchemaVersion(): Promise<number> {
-  const { Server } = await import("@stellar/stellar-sdk/rpc");
   const server = new Server(RPC_URL);
   const contract = new Contract(CONTRACT_ID);
 
@@ -39,7 +39,6 @@ async function getSchemaVersion(): Promise<number> {
 }
 
 async function migrate(users: string[]): Promise<void> {
-  const { Server } = await import("@stellar/stellar-sdk/rpc");
   const server = new Server(RPC_URL);
   const contract = new Contract(CONTRACT_ID);
 

@@ -6,7 +6,7 @@
  * allowance for their subscription token covers the next charge amount.
  */
 
-import { Server } from "@stellar/stellar-sdk/rpc";
+import { MultiEndpointServer as Server } from "./rpc-client";
 import {
   Contract,
   Networks,

@@ -37,7 +37,7 @@ import { writeFileSync, existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { Keypair } from "@stellar/stellar-sdk";
-import { Server } from "@stellar/stellar-sdk/rpc";
+import { MultiEndpointServer as Server } from "./rpc-client";
 
 // ── Configuration ────────────────────────────────────────────────────────────
 

@@ -6,7 +6,7 @@
  * with color-coded event types and human-readable amounts (stroops → XLM).
  */
 
-import { Server } from "@stellar/stellar-sdk/rpc";
+import { MultiEndpointServer as Server } from "./rpc-client";
 
 // ── Configuration ────────────────────────────────────────────────────────────────
 

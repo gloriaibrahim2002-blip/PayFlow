@@ -24,7 +24,7 @@ import {
   Address,
   xdr,
 } from "@stellar/stellar-sdk";
-import { Server } from "@stellar/stellar-sdk/rpc";
+import { MultiEndpointServer as Server } from "./rpc-client";
 import { readFileSync, writeFileSync } from "node:fs";
 
 const CONTRACT_ID = process.env.CONTRACT_ID ?? "";

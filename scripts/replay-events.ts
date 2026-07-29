@@ -17,7 +17,7 @@
  */
 
 import { Contract, Networks } from "@stellar/stellar-sdk";
-import { Server } from "@stellar/stellar-sdk/rpc";
+import { MultiEndpointServer as Server } from "./rpc-client";
 
 // ── Configuration ────────────────────────────────────────────────────────────
 
